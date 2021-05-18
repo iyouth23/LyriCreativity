@@ -1,0 +1,375 @@
+/* CSS file for LyriCreativity
+    Rules generally appear in the order in which they become
+    relevant on the website.
+
+    The media query accounts for site widths ranging from 576-767 px.
+
+/*  MAIN COLORS:
+        1.) #53C0DB             (BACKGROUND COLOR)
+        2.) #04252E             (TEXT)
+
+    TABLE COLORS:
+        1.) #355057             (ODD TABLE ROWS)
+        2.) #074554             (EVEN TABLE ROWS)
+
+    INPUT COLORS:
+        1.) #EFE1FA             (INPUT BOX BACKGROUND COLOR)
+        2.) #16434f             (PLACEHOLDER TEXT COLOR)
+
+    LINKS:
+        1.) rgb(14, 35, 171)    (LINK COLOR ONLY)
+*/
+
+body {
+    font-family: sans-serif;
+
+    color: #04252E;
+    background-color: #53C0DB;
+}
+
+#header {
+
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    text-align: center;
+
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    z-index: 10;
+
+    color: #53C0DB;
+    background-color: #04252E;
+
+}
+
+#header p {
+    margin: 0px;
+}
+
+#lyricreativity-title {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#lyricreativity-subtitle {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#navigation {
+    padding-top: 5px;
+    font-size: 0.9 em;
+}
+
+.col-3 {
+    margin: 3px 0px;
+}
+
+.button {
+
+    font-size: 0.8em;
+
+    padding: 5px;
+    border: 1px solid #53C0DB;
+    border-radius: 15px;
+    
+    color: #53C0DB;
+    background-color: #04252E;
+
+}
+
+.button:hover {
+    border: 1px solid #04252E;
+
+    color: #04252E;
+    background-color: #53C0DB;
+}
+
+#hero-image-div {
+    text-align: center;
+    padding-top: 135px;
+}
+
+#hero-image-div img {
+    width: 100%;
+}
+
+#introduction-section {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 100px;
+}
+
+#welcome-to-lyricreativity-section {
+    text-align: center;
+}
+
+#lyricreativity-description p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+#ian-youth-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+figcaption {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#founder {
+    font-size: 0.85em;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+h3, h4 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#what-does-lyricreativity-do {
+    margin-top: 20px;
+}
+
+#how-does-lyricreativity-work-section p, #how-does-lyricreativity-work-section ol {
+    font-style: italic;
+}
+
+li {
+    font-style: italic;
+    padding: 2px;
+}
+
+.lyricreativity-action {
+    font-weight: bold;
+}
+
+#table-and-description {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#creativity-table-title {
+    font-weight: bold;
+}
+
+thead {
+    font-weight: bold;
+
+    color: #53C0DB;
+    background-color: #04252E;
+}
+
+td {
+    text-align: center;
+    border: 1px solid #53C0DB;
+    padding: 15px;
+}
+
+.odd-table-row {
+    color: #efe1fa;
+    background-color: #355057;
+}
+
+.even-table-row {
+    color: #efe1fa;
+    background-color: #074554;
+}
+
+.try-it-button {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.try-it-button input {
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid #53C0DB;
+}
+
+.try-it-button input:hover {
+    border: 2px solid #04252E;
+}
+
+#read-on {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-top: 30px;
+}
+
+.main-content {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h5 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.case-study-song {
+    margin-bottom: 50px;
+}
+
+.artist-intro, .song-intro {
+    font-weight: bold;
+}
+
+.biography, .lyrics, .analysis {
+    font-size: 1.3em;
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.analysis {
+    margin-top: 25px;
+}
+
+.case-study-description {
+    line-height: 1.75em;
+}
+
+.row {
+    position: relative;
+}
+
+.song, .artist {
+    color: #150024;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.song-analysis {
+    color: #150024;
+    font-weight: bold;
+}
+
+.secondary-song, .secondary-artist {
+    font-weight: bold;
+}
+
+.col-md-5 {
+    text-align: center;
+}
+
+.case-study-lyrics {
+    font-family: monospace;
+    text-transform: capitalize;
+}
+
+.case-study-creativity-classification {
+    text-decoration: underline;
+}
+
+#explore-lyricreativity-for-yourself {
+    text-align: center;
+}
+
+#explore-lyricreativity-for-yourself div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+input {
+    border: 3px solid #04252E;
+    border-radius: 10px;
+    background-color: #efe1fa;
+}
+
+.more-artists {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Source: https://www.w3schools.com/cssref/sel_placeholder.asp */
+::placeholder {
+    color: #16434f;
+}
+
+#user-input-form input {
+    margin: 10px;
+}
+
+#get-lyrics-button {
+    font-weight: bold;
+}
+
+#website-information {
+    text-align: center;
+}
+
+hr {
+    border: 3px solid #04252E;
+    margin-top: 75px;
+    margin-bottom: 125px;
+}
+
+#small-hr, .last-hrs {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+a {
+    color: rgb(14, 35, 171);
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(14, 35, 171);
+}
+
+img {
+    border: 3px solid #04252E;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#hero-image {
+    border-radius: 0px;
+    border: none;
+}
+
+@media (max-width: 767.5px) {
+    .col-3 {
+        font-size: 0.75em;
+        padding: 0px;
+        margin: 0px;
+    }
+    .col-md-7 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    ul, ol {
+        text-align: left;
+    }
+    img {
+        height: 60%;
+        width: 60%;
+    }
+}

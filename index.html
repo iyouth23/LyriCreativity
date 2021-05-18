@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Final Project (Assignment 10 - CSE204)
+        </title>
+        <meta name="author" content="Ian Youth">
+        <meta name="description" content="Lyrics Website">
+
+        <!--Source: class lecture-->
+        <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+
+        <!--Source: https://www.bootstrapcdn.com/-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+            crossorigin="anonymous">
+
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!--Bootstrap documentation: https://getbootstrap.com/docs/4.0/layout/grid/ */-->
+
+        <header id="header">
+
+            <!--Music note symbol source: https://fsymbols.com/music/-->
+            <p id="lyricreativity-title">♫ LyriCreativity ♫</p>
+            <p id="lyricreativity-subtitle">Evaluating Musical Originality Since 2021</p>
+
+            <nav id="navigation" class="container">
+                <div class="row">
+                    <nav id="about-lyricreativity" class="col-3">
+                        <form action="#hr-1">
+                            <input type="submit" value="About LyriCreativity" class="button">
+                        </form>
+                    </nav>
+                    <nav id="learn-lyricreativity" class="col-3">
+                        <form action="#hr-2">
+                            <input type="submit" value="How LyriCreativity Works" class="button">
+                        </form>
+                    </nav>
+                    <nav id="see-lyricreativity" class="col-3">
+                        <form action="#hr-3">
+                            <input type="submit" value="See LyriCreativity in Action" class="button">
+                        </form>
+                    </nav>
+                    <nav id="try-lyricreativity" class="col-3">
+                        <form action="#hr-4">
+                            <input type="submit" value="Try LyriCreativity" class="button">
+                        </form>
+                    </nav>
+                </div>
+            </nav>
+        </header>
+
+        <div id="hero-image-div">
+            <!--Source: https://www.gettyimages.com/photos/despacito-song?family=editorial&phrase=despacito%20song&sort=mostpopular-->
+            <img id="hero-image" src="despacito-cover-art.jpg" alt="Despacito">
+        </div>
+
+        <div id="introduction-section" class="container">
+            <p id="introduction-paragraph">
+                LyriCreativity is your go-to program for mining musical metadata.
+                Easily evaluate the creativity of your favorite songs with our
+                user-friendly interface.
+            </p>
+        </div>
+
+        <hr id="hr-1">
+
+        <section id="welcome-to-lyricreativity-section" class="container">
+            <h3>
+                About LyriCreativity
+            </h3>
+            <div class="row align-items-center">
+                <div id="ian-youth-image=div" class="col-md-5">
+                    <figure id="ian-youth-figure">
+                        <!--Source: My Camera Roll-->
+                        <img id="ian-youth-image" src="ian-youth.jpg" alt="Ian Youth">
+                        <figcaption>Ian Youth, LyriCreativity founder</figcaption>
+                    </figure>
+                </div>
+                <article id="lyricreativity-description" class="col-md-7">
+                    <h4>
+                        LyriCreativity: Origins
+                    </h4>
+                    <p id="lyricreativity-mission-statement">
+                        I have always been fascinated with extracting data from my favorite music:
+                        which artists I play the most, which genres I listen to the most, and the like.
+                        I developed LyriCreativity to extend this data-gathering hobby, and to expose
+                        others to the fun inherent in data mining.
+                    </p>
+                    <hr id="small-hr">
+                    <h4 id="what-does-lyricreativity-do">
+                        What Does LyriCreativity Do?
+                    </h4>
+                    <p id="what-lyricreativity-does">
+                        LyriCreativity assesses the creativity of a song by calculating the percentage of
+                        lyrics that are unique in that song. You can use LyriCreativity to rate the
+                        creativity of your favorite songs by how repetitive the lyrics are.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <hr id="hr-2">
+
+        <section id="how-does-lyricreativity-work-section" class="container">
+            <h3>
+                How Does LyriCreativity Work?
+            </h3>
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p id="the-formula-description">
+                        LyriCreativity does the following in order to gauge a song's creativity:
+                    </p>
+                    <ol>
+                        <li><span class="lyricreativity-action">Extracts song lyrics</span> with the assistance of a <a href="https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search?console=1" target="_blank">public API</a></li>
+                        <li><span class="lyricreativity-action">Standardizes song lyrics</span> for analysis (removing
+                            unnecessary punctuation and formatting, and keeping only the words themselves)</li>
+                        <li><span class="lyricreativity-action">Calculates the number of words</span> in the song</li>
+                        <li><span class="lyricreativity-action">Calculates the number of unique words</span> that exist in the song</li>
+                        <li><span class="lyricreativity-action">Computes the number of unique words</span> as a percentage of total words</li>
+                        <li><span class="lyricreativity-action">Classifies a song</span> as "not creative," "somewhat creative," or "very 
+                            creative" based on this percentage</li>
+                    </ol>
+                    <div id="table-and-description">
+                        <p id="creativity-table-title">
+                            LyriCreativity classifies a song as follows:
+                        </p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Percent Unique Song Lyrics</td>
+                                    <td>Creativity Level</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd-table-row">
+                                    <td>(0%, 40%)</td>
+                                    <td>Not Creative</td>
+                                </tr>
+                                <tr class="even-table-row">
+                                    <td>[40%, 60%)</td>
+                                    <td>Somewhat Creative</td>
+                                </tr>
+                                <tr class="odd-table-row">
+                                    <td>[60%, 100%]</td>
+                                    <td>Very Creative</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-5 col-12">
+                    <figure>
+                        <!--Source: https://pitchfork.com/news/st-vincent-and-kid-cudi-announced-as-snl-musical-guests/-->
+                        <img src="kid-cudi.jpg" alt="Kid Cudi">
+                        <figcaption>Is Kid Cudi creative?</figcaption>
+                    </figure>
+                    <form class="try-it-button" action="#hr-4">
+                        <input type="submit" value="Find Out Below!" class="button">
+                    </form>
+                </div>
+            </div>
+            <p id="read-on">
+                Read on to see some examples of LyriCreativity in action!
+            </p>
+        </section>
+
+        <hr id="hr-3">
+
+        <article id="case-study-1" class="container">
+            <h2>
+                Case Study 1: Dance Music
+            </h2>
+            <h5 class="case-study-artist">
+                <span class="artist-intro">Artist:</span> Avicii
+            </h5>
+            <h5 class="case-study-song">
+                <span class="song-intro">Song:</span> Hey Brother
+            </h5>
+            <div class="row align-items-center main-content">
+                <!--Source: my own knowledge-->
+                <p class="col-md-7 case-study-description">
+                    <span class="biography">Biography and Background</span> Swedish DJ <span class="secondary-artist">Tim Bergling</span>, better known as <span class="artist">Avicii</span>, 
+                    rose to prominence in the early 2010s and rapidly became an integral component of the electronic music scene. 
+                    His hit single <span class="secondary-song">Wake Me Up</span> gained worldwide popularity, and it topped countless 
+                    music charts around the globe. <span class="secondary-artist">Avicii</span> frequently collaborated with other artists, 
+                    including <span class="secondary-artist">Dan Tyminski</span> of the bluegrass band <span class="secondary-artist">Union Station</span>.
+                    Together, <span class="secondary-artist">Avicii</span> and <span class="secondary-artist">Tyminski</span> produced 
+                    <span class="song">Hey Brother</span>, another dance hit. As is the case with other electronic music songs, 
+                    the focus here is more on the instrumentation rather than the lyrics. As a result, 
+                    <span class="secondary-song">Hey Brother</span> is not as lyrically diverse as many other singles. Watch as 
+                    LyriCreativity proves this for us:
+                </p>
+                <div id="avicii-image" class="col-md-5">
+                    <figure>
+                        <!--Source: https://twitter.com/avicii-->
+                        <img src="avicii.jpg" alt="Avicii">
+                        <figcaption>Avicii</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <p class="col-md-7">
+                    <span class="lyrics">Lyrics</span><span id="case-study-1-lyrics" class="case-study-lyrics">[LYRICS]</span>
+                </p>
+                <div id="hey-brother-image" class="col-md-5">
+                    <figure>
+                        <!--Source: https://en.wikipedia.org/wiki/Hey_Brother-->
+                        <img src="hey-brother.jpg" alt="Hey Brother">
+                        <figcaption><a href="https://www.youtube.com/watch?v=6Cp6mKbRTQY">Hey Brother</a> (Single Art)</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="lyricreativity-analysis col-md-7">
+                    <span class="analysis">LyriCreativity's Analysis</span>
+                    <ul>
+                        <li>Individual words: <span id="case-study-1-individual-words">[INDIVIDUAL WORDS]</span></li>
+                        <li>Unique words: <span id="case-study-1-unique-words">[UNIQUE WORDS]</span></li>
+                        <li>Percentage of unique song lyrics: <span id="case-study-1-percent-unique-words">[PERCENTAGE
+                            OF UNIQUE SONG LYRICS</span></li>
+                        <li>Classification for <span class="song-analysis">Hey Brother</span>: 
+                        <span id="case-study-1-creativity-classification" class="case-study-creativity-classification">[CLASSIFICATION]</span></li>
+                    </ul>
+                </div>
+                <div class="try-this-song-yourself col-md-5">
+                    <form class="try-it-button" action="#hr-4">
+                        <input type="submit" value="Try This Yourself!" class="button">
+                    </form>
+                </div>
+            </div>
+        </article>  
+
+        <hr>
+
+        <article id="case-study-2" class="container">
+            <h2>
+                Case Study 2: '80s Rock
+            </h2>
+            <h5 class="case-study-artist">
+                <span class="artist-intro">Artist:</span> Tears for Fears
+            </h5>
+            <h5 class="case-study-song">
+                <span class="song-intro">Song:</span> Everybody Wants to Rule the World
+            </h5>
+            <div class="row align-items-center main-content">
+                <!--Source: my own knowledge-->
+                <p class="col-md-7 case-study-description">
+                    <span class="biography">Biography and Background</span> One of the most iconic rock bands to emerge in the 1980s, <span class="artist">Tears for Fears</span>
+                    garnered attention for their new wave sound, and they experienced great popularity in the U.S. 
+                    following the so-called "Second British Invasion." Over the years, they wrote such hits as 
+                    <span class="secondary-song">Shout</span>, <span class="secondary-song">Pale Shelter</span>, and 
+                    <span class="secondary-song">Sowing the Seeds of Love</span>, with <span class="secondary-song">Shout</span>
+                    hitting number one on the Billboard Hot 100 chart. Their most recognizable song, however, may be 
+                    <span class="song">Everybody Wants to Rule the World</span>. Check out how LyriCreativity evaluates the 
+                    creativity of this iconic hit single!
+                </p>
+                <div id="tears-for-fears-image" class="col-md-5">
+                    <figure>
+                        <!--Source: https://www.rollingstone.com/music/music-news/tears-for-fears-195979/-->
+                        <img src="tears-for-fears.jpg" alt="Tears for Fears">
+                        <figcaption>Tears for Fears</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <p class="col-md-7">
+                    <span class="lyrics">Lyrics</span><span id="case-study-2-lyrics" class="case-study-lyrics">[LYRICS]</span>
+                </p>
+                <div id="everyobdy-wants-to-rule-the-world-image" class="col-md-5">
+                    <figure>
+                        <!--Source: https://www.amazon.com/Everybody-Wants-Rule-World-Collection/dp/B00DM2Q98K-->
+                        <img src="everybody-wants-to-rule-the-world.jpg" alt="Everybody Wants to Rule the World">
+                        <figcaption><a href="https://www.youtube.com/watch?v=aGCdLKXNF3w">Everybody Wants to Rule the World</a> (Single Art)</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="lyricreativity-analysis col-md-7">
+                    <span class="analysis">LyriCreativity's Analysis</span>
+                    <ul>
+                        <li>Individual words: <span id="case-study-2-individual-words">[INDIVIDUAL WORDS]</span></li>
+                        <li>Unique words: <span id="case-study-2-unique-words">[UNIQUE WORDS]</span></li>
+                        <li>Percentage of unique song lyrics: <span id="case-study-2-percent-unique-words">[PERCENTAGE
+                            OF UNIQUE SONG LYRICS</span></li>
+                        <li>Classification for <span class="song-analysis">Everybody Wants to Rule the World</span>: 
+                        <span id="case-study-2-creativity-classification" class="case-study-creativity-classification">[CLASSIFICATION]</span></li>
+                    </ul>
+                </div>
+                <div class="try-this-song-yourself col-md-5">
+                    <form class="try-it-button" action="#hr-4">
+                        <input type="submit" value="Try This Yourself!" class="button">
+                    </form>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <article id="case-study-3" class="container">
+            <h2>
+                Case Study 3: Modern Alternative Rock
+            </h2>
+            <h5 class="case-study-artist">
+                <span class="artist-intro">Artist:</span> of Montreal
+            </h5>
+            <h5 class="case-study-song">
+                <span class="song-intro">Song:</span> nursing slopes
+            </h5>
+            <div class="row align-items-center main-content">
+                <!--Source: my own knowledge-->
+                <p class="col-md-7 case-study-description">
+                    <span class="biography">Biography and Background</span> A lesser known but still commercially successful alternative band, <span class="artist">of Montreal</span>
+                    is recognized for hits like <span class="secondary-song">Gronlandic Edit</span> and 
+                    <span class="secondary-song">Wraith Pinned to the Mist and Other Games</span>. The group has always
+                    been known for their eclectic lyrics and novel composition structures. <span class="song">nursing slopes</span>
+                    showcases <span class="secondary-artist">of Montreal</span>'s creative side: there are two verses and just
+                    one instance of what might be considered the chorus. With seldom used words like "anthers" and "polymorphic" 
+                    in the song, it is no wonder that LyriCreativity gives high creativity marks to <span class="secondary-song">
+                    nursing slopes</span>.
+                </p>
+                <div id="of-montreal-image" class="col-md-5">
+                    <figure>
+                        <!--Source: https://pitchfork.com/features/interview/7539-of-montreal/-->
+                        <img src="of-montreal.jpg" alt="of Montreal">
+                        <figcaption>of Montreal</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <p class="col-md-7">
+                    <span class="lyrics">Lyrics</span><span id="case-study-3-lyrics" class="case-study-lyrics">[LYRICS]</span>
+                </p>
+                <div id="nursing-slopes-image" class="col-md-5">
+                    <figure>
+                        <!--Source: https://www.youtube.com/watch?v=BNNWMJgJv9I-->
+                        <img src="nursing-slopes.jpg" alt="nursing slopes">
+                        <figcaption><a href="https://www.youtube.com/watch?v=BNNWMJgJv9I">nursing slopes</a> (Vinyl Art)</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="lyricreativity-analysis col-md-7">
+                    <span class="analysis">LyriCreativity's Analysis</span>
+                    <ul>
+                        <li>Individual words: <span id="case-study-3-individual-words">[INDIVIDUAL WORDS]</span></li>
+                        <li>Unique words: <span id="case-study-3-unique-words">[UNIQUE WORDS]</span></li>
+                        <li>Percentage of unique song lyrics: <span id="case-study-3-percent-unique-words">[PERCENTAGE
+                            OF UNIQUE SONG LYRICS</span></li>
+                        <li>Classification for <span class="song-analysis">nursing slopes</span>: 
+                        <span id="case-study-3-creativity-classification" class="case-study-creativity-classification">[CLASSIFICATION]</span></li>
+                    </ul>
+                </div>
+                <div class="try-this-song-yourself col-md-5">
+                    <form class="try-it-button" action="#hr-4">
+                        <input type="submit" value="Try This Yourself!" class="button">
+                    </form>
+                </div>
+            </div>
+        </article>
+
+        <hr id="hr-4">
+
+        <section id="explore-lyricreativity-for-yourself" class="container">
+            <h3>
+                Explore LyriCreativity for Yourself
+            </h3>
+            <div class="row">
+                <p class="explore-lyricreativity-description col-8 mx-auto">
+                    Now that you have seen how LyriCreativity works, it's time to explore some of your own music!
+                    Simply enter an artist and a song title in the forms below and you'll be data mining in no
+                    time.
+                </p>
+                <p class="explore-lyricreativity-description col-8 mx-auto">
+                    <strong>Be aware: </strong> currently, <em>LyriCreativity only supports relatively popular artists</em>. 
+                    Additionally, <em>make sure your input matches your target song and artist exactly.</em> Some examples to try:
+                </p>
+            </div>
+            <p id="example-1">
+                <span class="song"><a href="https://www.youtube.com/watch?v=HXEJjtBouRA">Get Lucky</a></span> by <span class="more-artists">Daft Punk</span>
+            </p>
+            <p id="example-2">
+                <span class="song"><a href="https://www.youtube.com/watch?v=Amsbv8GlEBk">Say So</a></span> by <span class="more-artists">Doja Cat</span>
+            </p>
+            <p id="example-3">
+                <span class="song"><a href="https://www.youtube.com/watch?v=S4pzTs2wl0E">The Less I Know the Better</a></span> by <span class="more-artists">Tame Impala</span>
+            </p>
+            <p id="example-4">
+                <span class="song"><a href="https://www.youtube.com/watch?v=Zaz5NWdfQvU">Just What I Am</a></span> by <span class="more-artists">Kid Cudi</span>
+            </p>
+            <p id="example-5">
+                <span class="song"><a href="https://www.youtube.com/watch?v=e5kFShZof6A">Aquarian</a></span> by <span class="more-artists">Grizzly Bear</span>
+            </p>
+            <form id="user-input-form">
+                <input id="song-input-box" type="text" placeholder="Enter Song...">
+                <input id="artist-input-box" type="text" placeholder="Enter Artist...">
+                <input id="get-lyrics-button" type="submit" value="Obtain Creativity Profile" class="button">
+            </form>
+        </section>
+
+        <hr class="last-hrs">
+
+        <div id="user-examples">
+
+        </div>
+
+        <p id="website-information">
+            &copy; 2021 LyriCreativity. Contact <a href="mailto:ian.youth@wustl.edu">Ian Youth</a>
+            for more information.
+        </p>
+
+        <hr class="last-hrs">
+
+        <script src="script.js"></script>
+    </body>
+</html>
